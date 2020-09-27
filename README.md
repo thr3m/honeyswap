@@ -9,13 +9,13 @@ An open source interface for Honeyswap -- a protocol for decentralized exchange 
 - Interface: [honeyswap.org](https://honeyswap.org)
 - Docs: [about.1hive.org/docs/](https://about.1hive.org/docs/honeyswap)
 - Twitter: [@1HiveOrg](https://twitter.com/1HiveOrg)
-- Discord: [Uniswap](https://discord.gg/Y7TF6QA)
+- Discord: [1Hive](https://discord.gg/GfqnEGF)
 
 ## Accessing the Uniswap Interface
 
 To access the Uniswap Interface, use an IPFS gateway link from the
 [latest release](https://github.com/1Hive/uniswap-interface/releases/latest),
-or visit [app.uniswap.org](https://honeyswap.org).
+or visit [honeyswap.org](https://honeyswap.org).
 
 ## Listing a token
 
