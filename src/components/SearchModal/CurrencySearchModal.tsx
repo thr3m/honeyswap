@@ -1,6 +1,5 @@
 import { Currency } from 'uniswap-xdai-sdk'
 import React, { useCallback, useEffect, useState } from 'react'
-import ReactGA from 'react-ga'
 import useLast from '../../hooks/useLast'
 import { useSelectedListUrl } from '../../state/lists/hooks'
 import Modal from '../Modal'
@@ -43,17 +42,9 @@ export default function CurrencySearchModal({
   )
 
   const handleClickChangeList = useCallback(() => {
-    ReactGA.event({
-      category: 'Lists',
-      action: 'Change Lists'
-    })
     setListView(true)
   }, [])
   const handleClickBack = useCallback(() => {
-    ReactGA.event({
-      category: 'Lists',
-      action: 'Back'
-    })
     setListView(false)
   }, [])
   const handleSelectListIntroduction = useCallback(() => {
