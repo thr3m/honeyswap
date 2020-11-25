@@ -98,6 +98,10 @@ export default function Menu() {
             <Info size={14} />
             About
           </MenuItem>
+          <MenuItem id="link" href="https://hny.farm/">
+            <Info size={14} />
+            Farm
+          </MenuItem>
           <MenuItem id="link" href="https://about.1hive.org/docs/honeyswap">
             <BookOpen size={14} />
             Docs
@@ -106,9 +110,9 @@ export default function Menu() {
             <Code size={14} />
             Code
           </MenuItem>
-          <MenuItem id="link" href="https://discord.gg/qPa4h5w">
+          <MenuItem id="link" href="https://discord.gg/CtaEMX2U">
             <MessageCircle size={14} />
-            Discord
+            Help
           </MenuItem>
           <MenuItem id="link" href="https://info.honeyswap.org/">
             <PieChart size={14} />
