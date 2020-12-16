@@ -5,6 +5,7 @@ import { darken, lighten } from 'polished'
 import { RowBetween } from '../Row'
 import { ChevronDown } from 'react-feather'
 import { Button as RebassButton, ButtonProps } from 'rebass/styled-components'
+import { ReactComponent as PlusIcon } from '../../assets/images/plus-white.svg'
 
 const Base = styled(RebassButton)<{
   padding?: string
@@ -253,6 +254,32 @@ const ButtonErrorStyle = styled(Base)`
     border: 1px solid ${({ theme }) => theme.red1};
   }
 `
+
+const ButtonGrayAddHoney = styled(Base)`
+  background-color: #808080;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+
+  &:hover {
+    background: #7ce0d6;
+  }
+`
+
+const StyledPlusIcon = styled(PlusIcon)`
+  path {
+    stroke: ${({ theme }) => theme.text1};
+  }
+  margin-right: 5px;
+`
+
+export function ButtonImagePlus({ children, ...rest }: ButtonProps) {
+  return (
+    <ButtonGrayAddHoney {...rest}>
+      <StyledPlusIcon />
+      {children}
+    </ButtonGrayAddHoney>
+  )
+}
 
 export function ButtonConfirmed({ confirmed, ...rest }: { confirmed?: boolean } & ButtonProps) {
   if (confirmed) {
