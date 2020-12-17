@@ -263,10 +263,7 @@ export default function Swap() {
       />
       <ButtonImagePlus
         onClick={() => handleAddHnyToMM()}
-        style={{ width: 'auto', height: 37, position: 'absolute', marginTop: '-20px', marginRight: '-250px', whiteSpace: 'nowrap'
-      
-        //white-space: nowrap;width: 18% -webkit-fit-content
-        }}
+        style={{ width: 'auto', height: 37, position: 'absolute', marginTop: '-20px', marginRight: '-250px', whiteSpace: 'nowrap'}}
       >  
         Add HNY to MetaMask
       </ButtonImagePlus>
