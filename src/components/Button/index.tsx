@@ -259,6 +259,7 @@ const ButtonGrayAddHoney = styled(Base)`
   background-color: #808080;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
   border-radius: 6px;
+  height: 37px;
 
   &:hover {
     background: #7ce0d6;

@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react'
 import { HashRouter, Route, Switch } from 'react-router-dom'
+import { isMobile } from 'react-device-detect'
 import styled from 'styled-components'
 import Header from '../components/Header'
 import Popups from '../components/Popups'
@@ -44,6 +45,7 @@ const BodyWrapper = styled.div`
   overflow-y: auto;
   overflow-x: hidden;
   z-index: 10;
+  margin-top: ${isMobile ? '20px' : ''};
 
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
       padding: 16px;

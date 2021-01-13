@@ -1,6 +1,7 @@
 import { CurrencyAmount, JSBI, Token, Trade } from 'uniswap-xdai-sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { ArrowDown } from 'react-feather'
+import { isMobile } from 'react-device-detect'
 import { Text } from 'rebass'
 import { ThemeContext } from 'styled-components'
 import AddressInputPanel from '../../components/AddressInputPanel'
@@ -253,6 +254,8 @@ export default function Swap() {
 
   const { ethereum } = window
   const handleAddHnyToMM = useCallback(() => addTokenToMetamask(ethereum, HONEY), [])
+  const isHnySelected =
+    currencies[Field.INPUT]?.symbol === HONEY.symbol || currencies[Field.OUTPUT]?.symbol === HONEY.symbol
 
   return (
     <>
@@ -261,12 +264,20 @@ export default function Swap() {
         tokens={urlLoadedTokens}
         onConfirm={handleConfirmTokenWarning}
       />
-      <ButtonImagePlus
-        onClick={() => handleAddHnyToMM()}
-        style={{ width: 'auto', height: 37, position: 'absolute', marginTop: '-20px', marginRight: '-250px', whiteSpace: 'nowrap'}}
-      >  
-        Add HNY to MetaMask
-      </ButtonImagePlus>
+      {isHnySelected && (
+        <ButtonImagePlus
+          onClick={() => handleAddHnyToMM()}
+          style={{
+            width: 'auto',
+            position: 'absolute',
+            marginTop: '-20px',
+            marginRight: isMobile ? '' : '-200px',
+            whiteSpace: 'nowrap'
+          }}
+        >
+          Add HNY to MetaMask
+        </ButtonImagePlus>
+      )}
       <AppBody>
         <SwapPoolTabs active={'swap'} />
         <Wrapper id="swap-page">
