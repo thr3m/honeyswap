@@ -6,7 +6,7 @@
 An open source interface for Honeyswap -- a protocol for decentralized exchange of xDai tokens.
 
 - Website: [about.1hive.org](https://about.1hive.org/)
-- Interface: [honeyswap.org](https://honeyswap.org)
+- Interface: [honeyswap.org](https://app.honeyswap.org/)
 - Docs: [about.1hive.org/docs/](https://about.1hive.org/docs/honeyswap)
 - Twitter: [@1HiveOrg](https://twitter.com/1HiveOrg)
 - Discord: [1Hive](https://discord.gg/GfqnEGF)
